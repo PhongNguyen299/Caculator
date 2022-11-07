@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+    <input type="text" name="value-1" placeholder="Enter number 1" id="value-1">
+    <input type="text" name="value-2" placeholder="Enter number 2" id="value-2">
+    <p id="result"></p>
+    <input type="button" value="Addition(+)" id="add">
+    <input type="button" value="Subtraction(-)" id="sub">
+    <input type="button" value="Multiplication(*)" id="mul">
+    <input type="button" value="Division(/)" id="div">
+</body>
+<script>
+    const add = document.getElementById("add");
+    const sub = document.getElementById("sub");
+    const mul = document.getElementById("mul");
+    const div = document.getElementById("div");
+    let result = document.getElementById("result");
+
+    add.addEventListener('click',function (){
+        let valueFirst = Number(document.getElementById("value-1").value);
+        let valueSecond = Number(document.getElementById("value-2").value);
+        let calC = valueFirst + valueSecond;
+        document.getElementById("result").innerHTML = `Result: ${calC}`
+    });
+
+    sub.addEventListener('click', function (){
+        let valueFirst = Number(document.getElementById("value-1").value);
+        let valueSecond = Number(document.getElementById("value-2").value);
+        let calC = valueFirst - valueSecond;
+        document.getElementById("result").innerHTML = `Result: ${calC}`
+    });
+
+    mul.addEventListener('click', function (){
+        let valueFirst = Number(document.getElementById("value-1").value);
+        let valueSecond = Number(document.getElementById("value-2").value);
+        let calC = valueFirst * valueSecond;
+        document.getElementById("result").innerHTML = `Result: ${calC}`
+    });
+
+    div.addEventListener('click', function (){
+        let valueFirst = Number(document.getElementById("value-1").value);
+        let valueSecond = Number(document.getElementById("value-2").value);
+        let calC = valueFirst / valueSecond;
+        document.getElementById("result").innerHTML = `Result: ${calC}`
+    })
+</script>
+</html>
